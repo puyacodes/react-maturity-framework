@@ -19,7 +19,11 @@ const _useState = (initialState, afterSetState) => {
 
       if (isObject(_newState)) {
         if (isArray(_newState)) {
-          _newState = [...ref.current, ..._newState];
+          if (isArray(ref.current)) {
+            _newState = [...ref.current, ..._newState];
+          } else {
+            _newState = [..._newState];
+          }
         } else {
           _newState = { ...ref.current, ..._newState };
         }
