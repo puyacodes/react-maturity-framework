@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { isArray, isFunction } from "locustjs-base";
 
+// prev name: useSafeEffect
 const useJob = (fn, next, deps, onUnmount) => {
     const [error, setError] = useState();
     const [loading, setLoading] = useState(false);

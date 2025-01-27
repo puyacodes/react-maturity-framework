@@ -1,8 +1,8 @@
-import { appContext } from "./appContext";
-import PartA from './PartA'
-import PartB from './PartB'
-import PartC from './PartC'
-import PartD from './PartD'
+import { appContext } from "./contexts";
+import PartA from './components/PartA'
+import PartB from './components/PartB'
+import PartC from './components/PartC'
+import PartD from './components/PartD'
 import './App.css'
 
 const { Lang, Theme, User } = appContext.providers;
