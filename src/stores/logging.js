@@ -1,15 +1,12 @@
-import finalizeStore from "../helpers/finalizeStore";
+import createStore from "../util/functions/createStore";
 
-const store = (set) => ({
+const store = createStore('logging', (set) => ({
   logs: [],
   log: (log) =>
     set((state) => ({
       logs: [...state.logs, { ...log, index: state.logs.length }],
     })),
   clear: (_) => set((_) => ({ logs: [] })),
-});
+}));
 
-const loggingStore = finalizeStore(store, false);
-const loggingVanillaStore = finalizeStore(store, true);
-
-export { loggingStore, loggingVanillaStore };
+export default store;

@@ -4,19 +4,25 @@ import PartB from './components/PartB'
 import PartC from './components/PartC'
 import PartD from './components/PartD'
 import './App.css'
+import { useState } from "react";
 
 const { Lang, Theme, User } = appContext.providers;
 
-const Content = () => <div className="flex-container">
-  <PartA />
-  <PartB />
-  <PartC />
-  <PartD />
-</div>
+const Content = () => {
+  const [c, setC] = useState(true);
 
-const App1 = appContext.createApp(<Content />);
+  return <div className="flex-container">
+    Toggle C <input type="checkbox" onChange={_ => setC(!c)} checked={c} />
+    <PartA />
+    <PartB />
+    {c && <PartC />}
+    <PartD />
+  </div>
+}
 
-const App = () => (
+const App = appContext.createApp(<Content />);
+
+const App1 = () => (
   <Lang>
     <Theme>
       <User>
