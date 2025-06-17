@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { createStore } from "zustand/vanilla";
 import { devtools } from "zustand/middleware";
-import { isFunction } from 'locustjs-base';
+import { isFunction } from '@locustjs/base';
 
 const _createStore = (name, store) => {
     let s;

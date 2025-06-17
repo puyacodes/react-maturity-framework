@@ -1,4 +1,4 @@
-import Enum from "locustjs-enum";
+import Enum from "@locustjs/enum";
 
 const RouteType = Enum.define(
     {

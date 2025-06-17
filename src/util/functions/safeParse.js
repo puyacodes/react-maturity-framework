@@ -1,5 +1,5 @@
 import parse from "loose-json";
-import { isFunction, isSomeString } from "locustjs-base";
+import { isFunction, isSomeString } from "@locustjs/base";
 
 function safeParse(json, _default, loose = true, onError = null) {
   let result = _default;

@@ -1,6 +1,6 @@
 import resources from "@utils/locales";
 import merge from "lodash/merge";
-import { isSomeArray } from "locustjs-base";
+import { isSomeArray } from "@locustjs/base";
 
 function configureResources(appConfig, logger) {
   logger.enterScope(configureResources);

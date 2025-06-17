@@ -1,4 +1,4 @@
-import { isIterable, isSomeString } from "locustjs-base";
+import { isIterable, isSomeString } from "@locustjs/base";
 import getHash from './getHash';
 
 function distinct(list, keyProp) {

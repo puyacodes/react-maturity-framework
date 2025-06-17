@@ -1,4 +1,4 @@
-import { NotImplementedException, throwIfInstantiateAbstract } from "locustjs-exception";
+import { NotImplementedException, throwIfInstantiateAbstract } from "@locustjs/exception";
 
 class DebuggerBase {
   constructor() {

@@ -4,7 +4,7 @@ import {
   isSomeObject,
   isSomeString,
   isSomeArray,
-} from "locustjs-base";
+} from "@locustjs/base";
 import merge from "lodash/merge";
 import { objectify } from "@utils/base";
 

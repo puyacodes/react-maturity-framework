@@ -1,9 +1,17 @@
-import { isArray, isNumeric, isObject, isSomeObject } from "locustjs-base";
+import { isArray, isNumeric, isSomeObject } from "@locustjs/base";
 import safeParse from "../functions/safeParse";
+import { getProp, setProp } from "../util/functions";
 
 class Dictionary {
-  constructor() {
+  constructor(caseInsensitive) {
     this._entries = [];
+    this.caseInsensitive = caseInsensitive;
+  }
+  getProp(name) {
+    return getProp(this, name, this.caseInsensitive)
+  }
+  setProp(name, value) {
+    return setProp(this, name, value, this.caseInsensitive)
   }
   add(key, value) {
     let index = this.indexOf(key);

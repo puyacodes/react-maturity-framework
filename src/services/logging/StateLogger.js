@@ -1,12 +1,12 @@
-import { ChainLogger } from "locustjs-logging";
-import { loggingStore, loggingVanillaStore } from "../../stores/logging";
+import { ChainLogger } from "@locustjs/logging";
+import { loggingStore, loggingStoreVanilla } from "../../stores/logging";
 
 class StateLogger extends ChainLogger {
   getState() {
-    const { getState } =
-      this.options.storeType == "react" ? loggingStore : loggingVanillaStore;
+    const _store =
+      this.options.storeType == "react" ? loggingStore : loggingStoreVanilla;
 
-    return getState();
+    return _store.getState();
   }
   __logInternal(log) {
     this.getState().log(log);

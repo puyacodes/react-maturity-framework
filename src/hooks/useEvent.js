@@ -1,4 +1,4 @@
-import { isArray, isFunction, isSomeString, isString } from "locustjs-base";
+import { isArray, isFunction, isSomeString, isString } from "@locustjs/base";
 import { useCallback, useEffect, useState } from "react";
 
 function useEvent(

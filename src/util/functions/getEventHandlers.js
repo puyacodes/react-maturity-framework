@@ -1,4 +1,4 @@
-import { isFunction, isObject } from "locustjs-base";
+import { isFunction, isObject } from "@locustjs/base";
 
 const events = [
   // Clipboard Events

@@ -1,11 +1,11 @@
 import { createContext } from "react";
-import { throwIfNotInstanceOf } from "locustjs-exception";
-import { LocatorBase } from "locustjs-locator";
+import { throwIfNotInstanceOf } from "@locustjs/exception";
+import { LocatorBase } from "@locustjs/locator";
 
 const ServiceLocatorContext = createContext();
 
 const ServiceLocator = ({ locator, children }) => {
-  throwIfNotInstanceOf("locator", LocatorBase, locator);
+  throwIfNotInstanceOf("locator", LocatorBase, locator, false);
 
   return (
     <ServiceLocatorContext.Provider value={locator}>

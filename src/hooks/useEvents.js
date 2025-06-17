@@ -1,6 +1,6 @@
 import { preRaise, postRaise, isHandled } from "../functions/raiseEvent";
 import useDependencies from "./useDependencies";
-import { isFunction, isObject } from "locustjs-base";
+import { isFunction, isObject } from "@locustjs/base";
 
 const useEvents = (source) => {
   const dependencies = useDependencies();

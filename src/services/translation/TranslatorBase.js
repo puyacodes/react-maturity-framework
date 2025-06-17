@@ -2,10 +2,10 @@ import {
   throwIfInstantiateAbstract,
   throwIfNotInstanceOf,
   throwNotImplementedException,
-} from "locustjs-exception";
-import { isEmpty } from "locustjs-base";
-import { LoggerBase } from "locustjs-logging";
-import { format } from "locustjs-extensions-string";
+} from "@locustjs/exception";
+import { isEmpty } from "@locustjs/base";
+import { LoggerBase } from "@locustjs/logging";
+import { format } from "@locustjs/extensions-string";
 
 class TranslatorBase {
   constructor(logger, options) {

@@ -1,4 +1,4 @@
-import { BaseEnum } from "locustjs-enum";
+import { BaseEnum } from "@locustjs/enum";
 import { TranslatorBase } from "@services/translator";
 import { Dictionary } from "@utils/base";
 

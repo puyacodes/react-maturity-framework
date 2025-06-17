@@ -1,5 +1,5 @@
 import useLocator from "./useLocator";
-import { LoggerBase, NullLogger } from "locustjs-logging";
+import { LoggerBase, NullLogger } from "@locustjs/logging";
 
 const useLogger = (defaultLogger) => {
   const locator = useLocator();

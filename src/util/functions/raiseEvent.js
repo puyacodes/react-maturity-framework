@@ -1,4 +1,4 @@
-import { isObject, isPrimitive, isSomeArray, isArray } from "locustjs-base";
+import { isObject, isPrimitive, isSomeArray, isArray } from "@locustjs/base";
 
 function preRaise(e, source, dependencies, args, ...rest) {
   let result = -1;

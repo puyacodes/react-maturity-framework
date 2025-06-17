@@ -1,4 +1,4 @@
-import { isArray, isFunction, isObject } from "locustjs-base";
+import { isArray, isFunction, isObject } from "@locustjs/base";
 import { useRef, useState } from "react";
 
 // prev name: useFreeState

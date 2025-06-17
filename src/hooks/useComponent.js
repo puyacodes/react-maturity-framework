@@ -1,5 +1,5 @@
 import { useImperativeHandle, useRef } from "react";
-import { isFunction } from "locustjs-base";
+import { isFunction } from "@locustjs/base";
 import useEvents from "./useEvents";
 
 const useComponent = (

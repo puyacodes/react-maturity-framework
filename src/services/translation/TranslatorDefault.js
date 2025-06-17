@@ -1,5 +1,5 @@
 import TranslatorBase from "./TranslatorBase";
-import { getProp } from "@utils/base";
+import { query } from "@locustjs/base";
 
 /*
   this translator uses javascript objects as its text resources.
@@ -62,8 +62,10 @@ class TranslatorDefault extends TranslatorBase {
     return this.language;
   }
   setLanguage(lang) {
-    console.log({'current lang': lang})
+    this.logger.enterScope('TranslatorDefault.setLanguage');
+    this.logger.debug(`language changed from ${this.language} to ${lang}`)
     this.language = lang;
+    this.logger.exitScope();
   }
   _translateInternal(key, ...args) {
     let result = "";
@@ -71,10 +73,10 @@ class TranslatorDefault extends TranslatorBase {
 
     for (let item of Object.keys(resources)) {
       const resource = resources[item];
-      
+
       if (resource) {
         if (item == this.language) {
-          result = getProp(resource, key);
+          result = query(resource, key);
 
           if (result) {
             break;
@@ -86,7 +88,7 @@ class TranslatorDefault extends TranslatorBase {
             break;
           }
         } else {
-          const value = getProp(resources, key);
+          const value = query(resources, key);
 
           if (value !== undefined) {
             result = value;
@@ -95,8 +97,6 @@ class TranslatorDefault extends TranslatorBase {
         }
       }
     }
-
-    
 
     return result;
   }

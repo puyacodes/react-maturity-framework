@@ -1,5 +1,5 @@
 import TapLogger from "@services/logger";
-import { LoggerBase } from "locustjs-logging";
+import { LoggerBase } from "@locustjs/logging";
 
 let _logger;
 

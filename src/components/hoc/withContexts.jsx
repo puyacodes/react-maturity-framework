@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import useLocator from "../../hooks/useLocator";
 import useLogger from "../../hooks/useLogger";
 import useTranslator from "../../hooks/useTranslator";
-import { isSomeObject, isSomeString } from "locustjs-base";
+import { isSomeObject, isSomeString } from "@locustjs/base";
 import useDebugger from "../../hooks/useDebugger";
 
 const withContexts = (Component, contexts) =>

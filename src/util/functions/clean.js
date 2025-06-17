@@ -1,4 +1,4 @@
-import { isObject, isNull, isString, isArray, isFunction } from "locustjs-base";
+import { isObject, isNull, isString, isArray, isFunction } from "@locustjs/base";
 
 function clean(obj, fnClean) {
   let _obj = {

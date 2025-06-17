@@ -1,5 +1,5 @@
 import React from "react";
-import { isFunction, isObject } from "locustjs-base";
+import { isFunction, isObject } from "@locustjs/base";
 import { preRaise, postRaise, isHandled } from "../functions/raiseEvent";
 
 class BaseComponent extends React.Component {

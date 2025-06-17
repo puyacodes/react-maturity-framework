@@ -1,9 +1,9 @@
-import { isArray, isObject } from "locustjs-base";
+import { isArray, isObject } from "@locustjs/base";
 import { AjaxBase, AjaxUsingFetch } from "@services/ajax";
 import { ApiClientBase, ApiClientRemote } from "@services/apiclient";
-import { DefaultLocator, LocatorBase } from "locustjs-locator";
-import { LoggerBase } from "locustjs-logging";
-import { CacheBase, CacheDefault } from "locustjs-cache";
+import { DefaultLocator, LocatorBase } from "@locustjs/locator";
+import { LoggerBase } from "@locustjs/logging";
+import { CacheBase, CacheDefault } from "@locustjs/cache";
 import {
   TranslatorBase,
   Translatori18n,
@@ -17,7 +17,7 @@ import Framework from "../Framework";
 import TapDebugger from "@utils/debugger";
 import { ApiCryptorBase, ApiAesCryptor } from "@services/api-encryption";
 import { IdentityServiceBase, IdentityServiceLocalStorage, IdentityServiceSessionStorage } from '@business-services/base';
-import { isFunction } from "lodash";
+import { isFunction } from "@locustjs/base";
 
 let _locator;
 

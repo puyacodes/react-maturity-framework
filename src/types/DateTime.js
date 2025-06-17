@@ -1,4 +1,4 @@
-import { isDate, isObject } from "locustjs-base";
+import { isDate, isObject } from "@locustjs/base";
 
 class DateTime {
   constructor(value) {

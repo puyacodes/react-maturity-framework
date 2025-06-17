@@ -1,6 +1,6 @@
 import TranslatorBase from "./TranslatorBase";
-import { throwIfEmpty } from "locustjs-exception";
-import { isFunction } from "locustjs-base";
+import { throwIfEmpty } from "@locustjs/exception";
+import { isFunction } from "@locustjs/base";
 
 class Translatori18n extends TranslatorBase {
   constructor(logger, options) {
@@ -12,7 +12,9 @@ class Translatori18n extends TranslatorBase {
     return this.options.i18next.language;
   }
   setLanguage(lang) {
+    this.logger.enterScope('Translatori18n.setLanguage');
     this.options.i18next.changeLanguage(lang);
+    this.logger.exitScope();
   }
   _translateInternal(...args) {
     this.logger.enterScope("Translatori18n._translateInternal");

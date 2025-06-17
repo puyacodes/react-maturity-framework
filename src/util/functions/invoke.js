@@ -1,5 +1,5 @@
-import { isFunction } from "locustjs-base";
-import { ServiceResponse } from "@models/base";
+import { isFunction } from "@locustjs/base";
+import { ServiceResponse } from "@locustjs/services";
 
 function invoke(fn, ...args) {
   if (isFunction(fn)) {

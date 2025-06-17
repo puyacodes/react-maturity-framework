@@ -4,7 +4,7 @@ import {
     isSomeArray,
     isSomeString,
     isString,
-} from "locustjs-base";
+} from "@locustjs/base";
 import { getStores } from '../stores';
 
 const useStore = (name, members, vanilla = false) => {

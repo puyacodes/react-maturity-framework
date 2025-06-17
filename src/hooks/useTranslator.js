@@ -1,6 +1,6 @@
 import useLocator from "./useLocator";
 import { TranslatorBase, TranslatorNull } from "@services/translator";
-import { LoggerBase, NullLogger } from "locustjs-logging";
+import { LoggerBase, NullLogger } from "@locustjs/logging";
 
 const useTranslator = (options = {}) => {
   const locator = useLocator();

@@ -1,4 +1,4 @@
-import safeParse from '../util/functions';
+import { safeParse } from '../util/functions';
 
 function extend() {
     if (JSON.safeParse === undefined) {

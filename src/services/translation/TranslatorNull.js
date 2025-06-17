@@ -4,7 +4,7 @@ class TranslatorNull extends TranslatorBase {
   getLanguage() {}
   setLanguage(lang) {}
   _translateInternal(...args) {
-    return args[0];
+    return args && args[0];
   }
 }
 

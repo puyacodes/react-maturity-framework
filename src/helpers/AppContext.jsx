@@ -29,7 +29,6 @@ class AppContext {
 
         return { [name + 'Context']: Context, [name]: Provider, ['use' + name]: use };
     }
-
     createContexts(...names) {
         this.contexts = {}
         this.hooks = {}

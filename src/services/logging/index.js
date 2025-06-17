@@ -1,4 +1,4 @@
-import { DynamicLogger } from "locustjs-logging";
+import { DynamicLogger } from "@locustjs/logging";
 import StateLogger from "./StateLogger";
 
 class Logger extends DynamicLogger {

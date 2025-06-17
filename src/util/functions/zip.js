@@ -7,7 +7,7 @@ import {
   isDate,
   isNumeric,
   isIterable,
-} from "locustjs-base";
+} from "@locustjs/base";
 
 function zip(obj, ignoreEmpties = false) {
   let result = "";
@@ -27,7 +27,7 @@ function zip(obj, ignoreEmpties = false) {
   } else if (isPrimitive(obj) || obj instanceof RegExp || typeof obj == "symbol" || typeof obj == "bigint") {
     result = obj.toString();
   } else if (isArray(obj)) {
-    result = "[" + obj.map((x) => zip(x)) + "]";
+    result = "[" + obj.map(zip) + "]";
   } else if (isIterable(obj)) {
     const values = []
 
